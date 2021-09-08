@@ -23,8 +23,20 @@ jobs:
       - run:
           name: Run App
           command: ./gradlew lint
+          
+      - stages:
+          - build
+
+      - build:
+          stage: build
+          script:
+            - ./gradlew assembleDebug
+          artifacts:
+            paths:
+              - app/build/outputs/    
       - store_artifacts:
           path: app/build/reports
+  
           destination: reports
       - store_test_results:
           path: app/build/test-results
