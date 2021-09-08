@@ -113,7 +113,7 @@ class MainActivity : AppCompatActivity() {
 
     class MyStringCollection {
         infix fun add(s: String) {
-            Log.d("MainActivity - MyStringCollection", "add: $s")
+            Log.d("MainActivity", "add: $s")
         }
 
         fun build() {
