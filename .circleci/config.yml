@@ -23,9 +23,6 @@ jobs:
       - run:
           name: Run App
           command: ./gradlew lint
-          
-      - stages:
-          - build
 
       - build:
           stage: build
